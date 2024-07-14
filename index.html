@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looping statement</title>
+  </head>
+
+  <body>
+    <h1>Looping</h1>
+    <button onclick="displayleft()">Star Left Pattern</button><br /><br />
+    <button onclick="displayreverseleft()">Star LeftReverse Pattern</button
+    ><br /><br />
+    <button onclick="displayright()">Star Right Pattern</button><br /><br />
+    <button onclick="displayreverseright()">Star RightReverse Pattern</button
+    ><br /><br />
+    <button onclick="Pyramid()">Star Pyramid Pattern</button>
+
+    <script>
+      //    Left pattern
+      function displayleft() {
+        for (let i = 1; i <= 5; i++) {
+          for (let j = 1; j <= i; j++) {
+            document.write("*" + " ");
+          }
+          document.write("<br>");
+        }
+      }
+
+      // Right Pattern
+      function displayright() {
+        for (let i = 1; i <= 5; i++) {
+          //Add the white space to the left
+          for (let k = 1; k <= 5 - i; k++) {
+            document.write("&nbsp;&nbsp;");
+          }
+
+          //Add the '*' for each row
+          for (let j = 1; j <= i; j++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+
+      // Left Reverse Pattern
+
+      function displayreverseleft() {
+        for (let i = 5; i >= 1; i--) {
+          for (let j = 1; j <= i; j++) {
+            document.write("*" + " ");
+          }
+          document.write("<br>");
+        }
+      }
+
+      // Right Reverse Pattern
+
+      function displayreverseright() {
+        for (let i = 5; i >= 1; i--) {
+          //Add the white space to the left
+          for (let k = 1; k <= 5 - i; k++) {
+            document.write("&nbsp;&nbsp;");
+          }
+
+          //Add the '*' for each row
+          for (let j = 1; j <= i; j++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+
+      // Pyramid Pattern
+
+      function Pyramid() {
+        for (let i = 1; i <= 5; i++) {
+          for (let j = 5; j > i; j--) {
+            document.write(" &nbsp; ");
+          }
+          for (let k = 1; k <= 2 * i - 1; k++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

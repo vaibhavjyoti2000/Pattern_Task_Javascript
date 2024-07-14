@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Menu Driven Program</h1>
+
+    <script>
+      var calculator = true;
+      while (calculator) {
+        var response = parseInt(
+          window.prompt(
+            "Select any one option from follwing :\n 1)displayleft \n 2)displayreverseleft \n 3)displayright \n 4)displayreverseright \n 5)Pyramid \n 6)Exit"
+          )
+        );
+        switch (response) {
+          case 1:
+            for (let i = 1; i <= 5; i++) {
+              for (let j = 1; j <= i; j++) {
+                document.write("*" + " ");
+              }
+              document.write("<br>");
+            }
+            window.alert([i]);
+            break;
+          case 2:
+            for (let i = 1; i <= 5; i++) {
+              //Add the white space to the left
+              for (let k = 1; k <= 5 - i; k++) {
+                document.write("&nbsp;&nbsp;");
+              }
+
+              //Add the '*' for each row
+              for (let j = 1; j <= i; j++) {
+                document.write("*");
+              }
+              document.write("<br>");
+            }
+            window.alert([i]);
+            break;
+          case 3:
+            for (let i = 5; i >= 1; i--) {
+              for (let j = 1; j <= i; j++) {
+                document.write("*" + " ");
+              }
+              document.write("<br>");
+            }
+            window.alert([i]);
+            break;
+          case 4:
+            for (let i = 5; i >= 1; i--) {
+              //Add the white space to the left
+              for (let k = 1; k <= 5 - i; k++) {
+                document.write("&nbsp;&nbsp;");
+              }
+
+              //Add the '*' for each row
+              for (let j = 1; j <= i; j++) {
+                document.write("*");
+              }
+              document.write("<br>");
+            }
+            window.alert([i]);
+            break;
+
+          case 5:
+            for (let i = 1; i <= 5; i++) {
+              for (let j = 5; j > i; j--) {
+                document.write(" &nbsp; ");
+              }
+              for (let k = 1; k <= 2 * i - 1; k++) {
+                document.write("*");
+              }
+              document.write("<br>");
+            }
+            window.alert([i]);
+            break;
+
+          case 6:
+            alert("Thank you for using the calculator, visit again...");
+            calculator = false;
+            break;
+          default:
+            alert("Please select the valid option ");
+        }
+      }
+    </script>
+  </body>
+</html>
